@@ -1,0 +1,114 @@
+@font-face {
+  font-family: ostrich; src: url("../fonts/ostrich-regular.ttf");
+}
+
+@font-face {
+  font-family: ostrichbold; src: url("../fonts/OstrichSans-Heavy.otf");
+}
+
+body, html {
+  background-color: #251B12;
+  height: 100%;
+}
+
+h1 {
+  color: #E9190F;
+  font-size: 42px;
+  font-family: ostrichbold;
+  margin-top: 12px;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: ostrich;
+  margin-bottom: 18px;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.button {
+  text-align: center;
+  border: 1px solid white;
+  width: 50%;
+  padding: 2px 80px 2px 80px;
+  margin-bottom: 20px;
+  font-family: ostrich;
+  color: white;
+  background-color: black;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.button:hover {
+  border: 1px solid red;
+}
+
+.button:active {
+  border: 1px solid orange;
+}
+
+.flexMain {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.flexCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.vertFlexCenter {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.foot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.unselected {
+  filter: grayscale(100%);
+}
+
+.selected {
+  -webkit-filter: drop-shadow(1px 1px 1px #FE4E00 );
+  filter: drop-shadow(1px 1px 1px #FE4E00);
+}
+
+.tier {
+  padding-bottom: 12px;
+}

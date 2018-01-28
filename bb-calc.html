@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>BB Perk Calculator</title>
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://unpkg.com/popper.js" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main" class="flexMain">
+      <div id="title" class="title flexCenter">
+        <h1> Battle Brothers Perk Calculator </h1>
+        <h2 id="Level"> Level Required: </h2>
+        <div id="reset" class="button">
+          Reset
+        </div>
+      </div>
+
+      <div id="talent-container" class="vertFlexCenter">
+        <div id="talentPane" >
+          <div id="1" class="tier">
+            <img id="1-1" class="unselected" title="Adapt to your opponent's moves! Gain an additional stacking + 8% chance to hit with each attack that misses an opponent. Bonus is reset upon landing a hit." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t1-1.png" />
+
+            <img id="1-2" class="unselected" title="Cripple your enemies! Lowers the threshold to inflict injuries by 33% for both melee and ranged attacks." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t1-2.png" />
+
+            <img id="1-3" class="unselected" title="Bring it on! Hitpoints are increased by 25%, which also reduces the chance to sustain debilitating injuries when being hit." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t1-3.png" />
+
+            <img id="1-4" class="unselected" title="Once per battle, upon receiving a killing blow, survive instead with a few hitpoints left. The next hit is likely to kill you for good, of course." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t1-4.png" />
+
+            <img id="1-5" class="unselected" title="Unlock two extra bag slots to carry all your favorite things with no fatigue penalty for all your four bags!" data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t1-5.png" />
+
+            <img id="1-6" class="unselected" title="Learn to move on difficult terrain. Action Point costs for movement on all terrain is reduced by -1 to a minimum of 2 Action Points per tile, and Fatigue cost is reduced to half. Changing height levels also has no additional Action Point cost anymore." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t1-6.png" />
+
+            <img id="1-7" class="unselected" title="Unlocks the 'Adrenaline' skill which costs 0 AP and 25 Fatigue to be used and puts you first in the turn order for the next round, to have another turn before your enemies do. Feel the adrenaline rushing through your veins!" data-toggle="tooltip" data-placement="bottom" data-animation="false" data-animation="false" src="/img/perk-t1-7.png" />
+
+            <img id="1-8" class="unselected" title="Unlocks the 'Recover' skill which allows for resting a turn (spend 9 AP) in order to reduce accumulated Fatigue by 50%." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t1-8.png" />
+
+            <img id="1-9" class="unselected" title="Everything can be learned if you put your mind to it. Gain additional 20% experience from battle. At the eleventh character level, you gain an additional perk point upon and this perk becomes inert." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t1-9.png" />
+          </div>
+
+          <div id="2" class="tier">
+            <img id="2-1" class="unselected" title="Inflict additional 20% damage against targets that have sustained any injury effects, like a broken arm." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t2-1.png" />
+
+            <img id="2-2" class="unselected" title="Nailed it! The penalty to hitchance when shooting at a target that has no clear line of fire is reduced from 75% to 50% for ranged weapons. This affects an initial, seperate, undisplayed roll which determines whether the shot hits the intended target, and only applies when the intended target has Cover. See Combat Mechanics for further details." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t2-2.png" />
+
+            <img id="2-3" class="unselected" title="Too fast for you! Gain 15% of the character's Initiative as a bonus to Melee and Ranged Defense." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t2-3.png" />
+
+            <img id="2-4" class="unselected" title="An iron will is not swayed from the true path easily. Resolve is increased by 25%." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t2-4.png" />
+
+            <img id="2-5" class="unselected" title="Keep it together! Any injuries freshly suffered take effect only after combat ends, and no morale check will be triggered for this character when nearby allies panic and flee." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t2-5.png" />
+
+            <img id="2-6" class="unselected" title="Hits to the head no longer cause critical damage to this character, which also lowers the risk of sustaining debilitating head injuries." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t2-6.png" />
+
+            <img id="2-7" class="unselected" title="Looking for this? Swapping items in battle becomes a free action with no Action Point cost once every turn." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t2-7.png" />
+
+            <img id="2-8" class="unselected" title="Mercenary life comes easy when you're naturally gifted. Instantly gain a levelup to increase this character's attributes with maximum rolls but without talents." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t2-8.png" />
+          </div>
+
+          <div id="3" class="tier">
+            <img id="3-1" class="unselected" title="Honor doesn't win you fights, stabbing the enemy where it hurts does. The bonus to hitchance in melee is doubled to +10% for each ally, including Wardogs, surrounding and distracting your target." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t3-1.png" />
+
+            <img id="3-1" class="unselected" title="When being attacked with ranged weapons, gain 1 + 10% of your base Ranged Defense as additional Ranged Defense per tile that the attacker is away." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t3-2.png" />
+
+            <img id="3-1" class="unselected" title="Learn to better deflect hits to the side instead of blocking them head on. The shield defense bonus is increased by 25%. This also applies to the amplified shield bonus from the Shieldwall skill. Additionally, shield damage received is reduced by 50% to a minimum of 1." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t3-3.png" />
+
+            <img id="3-1" class="unselected" title="The fatigue penalty from wearing armor and helmet is reduced by 30" data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t3-4.png" />
+
+            <img id="3-1" class="unselected" title="Unlocks the 'Rotation' skill which costs 3 AP and 25 Fatigue to be used and allows two characters to switch places while ignoring zone of control as long as neither character is stunned, rooted or otherwise disabled." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t3-5.png" />
+
+            <img id="3-1" class="unselected" title="Unlocks the 'Rally the Troops' skill. Rally costs 6 AP, 25 Fatigue and triggers a morale check to raise morale of any ally at Wavering or worse morale within 4 tiles; with a bonus of 40% of the skill user's Resolve, and a penalty of -10 per tile of distance, to the roll. It can also rally fleeing and panicked allies." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t3-6.png" />
+
+            <img id="3-1" class="unselected" title="Unlocks the 'Taunt' skill which costs 4 AP and 15 Fatigue to be used and makes opponents take offensive actions instead of defensive ones, and attack the taunting character over another potentially more vulnerable one." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t3-7.png" />
+          </div>
+
+          <div id="4" class="tier">
+            <img id="4-1" class="unselected" title="Master maces to beat your opponents into submission, armored or not. Skills build up 25% less Fatigue. Knock Out has a 100% chance to stun the target if not immune." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-1.png" />
+
+            <img id="4-2" class="unselected" title="Master flails and circumvent your opponent's shield. Skills build up 25% less Fatigue. Lash ignores the defense bonus of shield. Thresh gains +5% chance to hit." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-2.png" />
+
+            <img id="4-3" class="unselected" title="Master hammers and fighting against heavily armored opponents. Skills build up 25% less Fatigue. Destroy Armor inflicts 33% more damage against armor. Shatter gains + 5% chance to hit." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-3.png" />
+
+            <img id="4-4" class="unselected" title="Master combat with axes and destroying shields. Skills build up 25% less Fatigue. Split Shield damage to shields is increased by 50% when used with axes. Round Swing gains + 5% chances to hit." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-4.png" />
+
+            <img id="4-5" class="unselected" title="Master cleavers to inflict gruesome wounds. Skills build up 25% less Fatigue. Bleeding damage inflicted by cleavers is doubled to 10 per turn." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-5.png" />
+
+            <img id="4-6" class="unselected" title="Master the art of swordfighting and using your opponent's mistakes to your advantage. Skills build up 25% less Fatigue. Riposte no longer has a penalty to hitchance. Split and Swing gain a + 5% chance to hit." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-6.png" />
+
+            <img id="4-7" class="unselected" title="Master swift and deadly daggers. Skills build up 25% less Fatigue. Stab and Puncture now costs 3 AP to use (instead of 4) which allows for an additional attack each turn." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-7.png" />
+
+            <img id="4-8" class="unselected" title="Master polearms and keeping the enemy at bay. Skills build up 25% less Fatigue. Repel and Hook will now also stagger any target hit, moving it to the end of the turn order. Reap gains +5% chance to hit." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-8.png" />
+
+            <img id="4-9" class="unselected" title="Master fighting with spears and keeping the enemy at bay. Skills build up 25% less Fatigue. Spearwall is no longer disabled once an opponent manages to overcome it. Instead, Spearwall continues to give free attacks on any further opponent attempting to enter the zone of control." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-9.png" />
+
+            <img id="4-10" class="unselected" title="Master crossbows and learn where to aim best. Skills build up 25% less Fatigue. An additional 20% of damage inflicted with crossbows ignores armor." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-10.png" />
+
+            <img id="4-11" class="unselected" title="Master the art of archery and pelting your opponents with arrows from afar. Skills build up 25% less Fatigue. View range and maximum firing range with bows is increased by 1." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-11.png" />
+
+            <img id="4-12" class="unselected" title="Master throwing weapons to wound or kill the enemy before they even get close. Skills build up 25% less Fatigue. Damage is increased by 40% when attacking at 2 tiles of distance. Damage is increased by 20% when attacking at 3 tiles of distance." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t4-12.png" />
+          </div>
+
+          <div id="5" class="tier">
+            <img id="5-1" class="unselected" title="Learn to use the superior reach of large weapons to keep the enemy from getting close enough to land a good hit. Each hit with a two-handed melee weapon add as a stack of Reach Advantage that increases your Melee Defense by 20%, up to a maximum of 6 stacks, until this character`s next turn. A single attack hitting multiple targets can add several stacks at once. If you put away your weapon, you lose all stacks." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t5-1.png" />
+
+            <img id="5-1" class="unselected" title="Learn to take advantage of your high initiative and prevent the enemy from attacking effectively by overwhelming them with your attacks! With every attack, hit or miss, against an opponent that acts after you in the current round, inflict the 'Overwhelmed' status effect which lowers both Melee Skill and Ranged Skill by 10% for one turn. The effect stacks with each attack and can be applied to multiple targets at once with a single attack." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t5-2.png" />
+
+            <img id="5-1" class="unselected" title="I work best alone. With no ally within 3 tiles of distance, gain a 15% bonus to Melee Skill, Ranged Skill, Melee Defense, Ranged Defense, and Resolve." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t5-3.png" />
+
+            <img id="5-1" class="unselected" title="Unlocks the 'Footwork' skill which costs 3 AP and 25 Fatigue to be used and allows you to leave a zone of control without triggering free attacks by using skillful footwork." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t5-4.png" />
+
+            <img id="5-1" class="unselected" title="I'm used to it. Any defense malus due to being surrounded by opponents no longer applies to this character." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t5-5.png" />
+          </div>
+
+          <div id="6" class="tier">
+            <img id="6-1" class="unselected" title="RAARGH! Once per turn, upon killing an enemy, 4 Action Points are immediately regained. Characters can not regain more than their maximum Action Points and no more than 4 for a single attack." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t6-1.png" />
+
+            <img id="6-2" class="unselected" title="Go for the head! Gain +15% chance to hit the head for critical damage each time you hit the body. Bonus is reset upon hitting the head." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t6-2.png" />
+
+            <img id="6-3" class="unselected" title="Specialize in light armor! By nimbly dodging or deflecting blows, gain the chance to convert any hits to glancing hits that inflict only half of their normal damage. The chance to receive only a glancing hit scales between 100% with no penalty to Maximum Fatigue, and 0% at 50 or more penalty to Maximum Fatigue. The lighter your armor and weapons, the more you benefit." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t6-3.png" />
+
+            <img id="6-4" class="unselected" title="Specialize in heavy armor! Armor damage taken is reduced by a percentage equal to 5% of the total armor value of both body and head armor. The heavier your armor and helmet, the more you benefit." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t6-4.png" />
+          </div>
+
+          <div id="7" class="tier">
+            <img id="7-1" class="unselected" title="Make them scatter and flee! Any attack that inflicts at least 1 point of damage to hitpoints triggers a morale check for the opponent, as opposed to only if at or above 15 points of damage." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t7-1.png" />
+
+            <img id="7-2" class="unselected" title="Become one with your weapon and go for the weak spots! With the offhand free, an additional + 25% of any damage ignores armor. Does not work with two-handed weapons." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t7-2.png" />
+
+            <img id="7-3" class="unselected" title="Go into a killing frenzy! A kill increases all damage by 25% for 2 turns. Does not stack, but another kill will reset the timer." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t7-3.png" />
+
+            <img id="7-4" class="unselected" title="Unlocks the 'Indomitable' skill which costs 3 AP and 20 Fatigue to be used and grants a 50% damage reduction and immunity to being stunned, knocked back or grabbed for one turn." data-toggle="tooltip" data-placement="bottom" data-animation="false" src="/img/perk-t7-4.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="foot" class="foot">
+      <a href="mailto:everycrime@yahoo.com?Subject=BBCalc" target="_top">[Contact]</a>
+    </div>
+
+
+
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+
+    <script>
+    $(document).ready(function(){
+        var abilityPoints = 10;
+        var tier = 1;
+
+        $( function() {
+          $('[data-toggle="tooltip"]').tooltip();
+          $('[rel=tooltip]').tooltip('disable')
+          $('[rel=tooltip]').tooltip('enable')
+          $('[rel=tooltip]').tooltip('destroy')
+        });
+
+        $("#reset").click(function() {
+          abilityPoints = 10;
+          tier = 1;
+          $("img").attr('class', 'unselected')
+          $('#Level').text('Level Required: ')
+        });
+
+        $("img").click(function() {
+            // Change class to selected
+            if (abilityPoints > 0) {
+              var compareTier = Number($(this).parent().attr('id'));
+              if (compareTier <= tier) {
+                if ($(this).attr('class') !== 'selected') {
+                  // Subtract an ability point and increase in tier
+                  $('#Level').text('Level Required: ' + Math.min(11, tier+1))
+
+                  $(this).attr('class', 'selected')
+                  if ($(this).attr('id') !== '1-9') {
+                    abilityPoints --
+                  }
+                  tier ++
+                }
+              }
+            }
+        });
+
+    });
+    </script>
+  </body>
+</html>
