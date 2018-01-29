@@ -225,6 +225,7 @@
         $("#reset").click(function() {
           abilityPoints = 10;
           tier = 1;
+          arrayOfSelectedTiers = [];
           $("img").attr('class', 'unselected')
           $('#Level').text('Level Required: ')
           history.replaceState('', document.title, window.location.pathname)
