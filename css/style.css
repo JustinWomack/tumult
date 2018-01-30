@@ -24,12 +24,28 @@ h2 {
   margin-bottom: 18px;
 }
 
+h3 {
+  color: #FCFAC7;
+  font-weight: 500;
+  font-size: 21px;
+}
+
 a {
   color: inherit;
 }
 
+p {
+  font-family: ostrich;
+  font-size: 18px;
+  color: white;
+}
+
 a:hover {
   color: inherit;
+}
+
+.tooltip-inner {
+  max-width: 280px;
 }
 
 .button {
