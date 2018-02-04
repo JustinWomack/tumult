@@ -109,11 +109,15 @@ a:hover {
   left: 0;
   text-align: center;
   color: white;
-  font-size: 10px;
+  font-size: 13px;
   display: flex;
   width: 100%;
   align-items: flex-end;
   justify-content: flex-end;
+}
+
+.footerItem {
+  margin-right: 10px;
 }
 
 .unselected {
