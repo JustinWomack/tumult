@@ -14,10 +14,11 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="background-image"></div>
+    <div class="background-image hidden-sm-down"></div>
+    <div class="background-image-sm hidden-md-up"></div>
     <div class="background-cover"></div>
-    <div id="main" class="flexMain">
-      <div id="title" class="title flexCenter">
+    <div id="main" class="container">
+      <div id="title" class="title flexCenter row">
         <h1> Battle Brothers Perk Calculator </h1>
         <h2 id="Level"> Level Required: 1</h2>
         <div id="reset" class="button">
@@ -25,9 +26,9 @@
         </div>
       </div>
 
-      <div id="talent-container" class="vertFlexCenter">
-        <div id="talentPane" >
-          <div id="1" class="tier">
+      <div id="talent-container" class="vertFlexCenter row">
+        <div id="talentPane" class="container">
+          <div id="1" class="tier row justify-content-center" >
             <img id="1-1" class="unselected" title="<h3>Fast Adaptation</h3>Adapt to your opponent's moves! Gain an additional stacking + 8% chance to hit with each attack that misses an opponent. Bonus is reset upon landing a hit." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t1-1.png" alt="Perk Image"/>
 
             <img id="1-2" class="unselected" title="<h3>Crippling Strikes</h3> Cripple your enemies! Lowers the threshold to inflict injuries by 33% for both melee and ranged attacks." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t1-2.png" alt="Perk Image"/>
@@ -44,10 +45,12 @@
 
             <img id="1-8" class="unselected" title="<h3>Recover</h3>Unlocks the 'Recover' skill which allows for resting a turn (spend 9 AP) in order to reduce accumulated Fatigue by 50%." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t1-8.png" alt="Perk Image"/>
 
-            <img id="1-9" class="unselected" title="<h3>Student</h3>Everything can be learned if you put your mind to it. Gain additional 20% experience from battle. At the eleventh character level, you gain an additional perk point upon and this perk becomes inert." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t1-9.png" alt="Perk Image"/>
+            <img id="1-9" class="unselected" title="<h3>Student</h3>Everything can be learned if you put your mind to it. Gain additional 20% experience from battle. At the eleventh character level, you gain an additional perk point and this perk becomes inert." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t1-9.png" alt="Perk Image"/>
           </div>
 
-          <div id="2" class="tier">
+          <div class="divider hidden-md-up"></div>
+
+          <div id="2" class="tier row justify-content-center">
             <img id="2-1" class="unselected" title="<h3>Executioner</h3>Inflict additional 20% damage against targets that have sustained any injury effects, like a broken arm." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t2-1.png" alt="Perk Image"/>
 
             <img id="2-2" class="unselected" title="<h3>Bullseye</h3>Nailed it! The penalty to hitchance when shooting at a target that has no clear line of fire is reduced from 75% to 50% for ranged weapons. This affects an initial, seperate, undisplayed roll which determines whether the shot hits the intended target, and only applies when the intended target has Cover. See Combat Mechanics for further details." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t2-2.png" alt="Perk Image"/>
@@ -65,7 +68,9 @@
             <img id="2-8" class="unselected" title="<h3>Gifted</h3>Mercenary life comes easy when you're naturally gifted. Instantly gain a levelup to increase this character's attributes with maximum rolls but without talents." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t2-8.png" alt="Perk Image"/>
           </div>
 
-          <div id="3" class="tier">
+          <div class="divider hidden-md-up"></div>
+
+          <div id="3" class="tier row justify-content-center">
             <img id="3-1" class="unselected" title="<h3>Backstabber</h3>Honor doesn't win you fights, stabbing the enemy where it hurts does. The bonus to hitchance in melee is doubled to +10% for each ally, including Wardogs, surrounding and distracting your target." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t3-1.png" alt="Perk Image"/>
 
             <img id="3-2" class="unselected" title="<h3>Anticipation</h3>When being attacked with ranged weapons, gain 1 + 10% of your base Ranged Defense as additional Ranged Defense per tile that the attacker is away." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t3-2.png" alt="Perk Image"/>
@@ -81,7 +86,9 @@
             <img id="3-7" class="unselected" title="<h3>Taunt</h3>Unlocks the 'Taunt' skill which costs 4 AP and 15 Fatigue to be used and makes opponents take offensive actions instead of defensive ones, and attack the taunting character over another potentially more vulnerable one." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t3-7.png" alt="Perk Image"/>
           </div>
 
-          <div id="4" class="tier">
+          <div class="divider hidden-md-up"></div>
+
+          <div id="4" class="tier row justify-content-center">
             <img id="4-1" class="unselected" title="<h3>Mace Mastery</h3>Master maces to beat your opponents into submission, armored or not. Skills build up 25% less Fatigue. Knock Out has a 100% chance to stun the target if not immune." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t4-1.png" alt="Perk Image"/>
 
             <img id="4-2" class="unselected" title="<h3>Flail Mastery</h3>Master flails and circumvent your opponent's shield. Skills build up 25% less Fatigue. Lash ignores the defense bonus of shield. Thresh gains +5% chance to hit." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t4-2.png" alt="Perk Image"/>
@@ -107,7 +114,9 @@
             <img id="4-12" class="unselected" title="<h3>Throwing Mastery</h3>Master throwing weapons to wound or kill the enemy before they even get close. Skills build up 25% less Fatigue. Damage is increased by 40% when attacking at 2 tiles of distance. Damage is increased by 20% when attacking at 3 tiles of distance." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t4-12.png" alt="Perk Image"/>
           </div>
 
-          <div id="5" class="tier">
+          <div class="divider hidden-md-up"></div>
+
+          <div id="5" class="tier row justify-content-center">
             <img id="5-1" class="unselected" title="<h3>Reach Advantage</h3>Learn to use the superior reach of large weapons to keep the enemy from getting close enough to land a good hit. Each hit with a two-handed melee weapon add as a stack of Reach Advantage that increases your Melee Defense by 20%, up to a maximum of 6 stacks, until this character`s next turn. A single attack hitting multiple targets can add several stacks at once. If you put away your weapon, you lose all stacks." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t5-1.png" alt="Perk Image"/>
 
             <img id="5-2" class="unselected" title="<h3>Overwhelm</h3>Learn to take advantage of your high initiative and prevent the enemy from attacking effectively by overwhelming them with your attacks! With every attack, hit or miss, against an opponent that acts after you in the current round, inflict the 'Overwhelmed' status effect which lowers both Melee Skill and Ranged Skill by 10% for one turn. The effect stacks with each attack and can be applied to multiple targets at once with a single attack." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t5-2.png" alt="Perk Image"/>
@@ -119,7 +128,9 @@
             <img id="5-5" class="unselected" title="<h3>Footwork</h3>Unlocks the 'Footwork' skill which costs 3 AP and 25 Fatigue to be used and allows you to leave a zone of control without triggering free attacks by using skillful footwork."  data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t5-5.png" alt="Perk Image"/>
           </div>
 
-          <div id="6" class="tier">
+          <div class="divider hidden-md-up"></div>
+
+          <div id="6" class="tier row justify-content-center">
             <img id="6-1" class="unselected" title="<h3>Berserk</h3>RAARGH! Once per turn, upon killing an enemy, 4 Action Points are immediately regained. Characters can not regain more than their maximum Action Points and no more than 4 for a single attack." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t6-1.png" alt="Perk Image"/>
 
             <img id="6-2" class="unselected" title="<h3>Head Hunter</h3>Go for the head! Gain +15% chance to hit the head for critical damage each time you hit the body. Bonus is reset upon hitting the head." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t6-2.png" alt="Perk Image"/>
@@ -129,7 +140,9 @@
             <img id="6-4" class="unselected" title="<h3>Battle Forged</h3>Specialize in heavy armor! Armor damage taken is reduced by a percentage equal to 5% of the total armor value of both body and head armor. The heavier your armor and helmet, the more you benefit." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t6-4.png" alt="Perk Image"/>
           </div>
 
-          <div id="7" class="tier">
+          <div class="divider hidden-md-up"></div>
+
+          <div id="7" class="tier row justify-content-center">
             <img id="7-1" class="unselected" title="<h3>Fearsome</h3>Make them scatter and flee! Any attack that inflicts at least 1 point of damage to hitpoints triggers a morale check for the opponent, as opposed to only if at or above 15 points of damage." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t7-1.png" alt="Perk Image"/>
 
             <img id="7-2" class="unselected" title="<h3>Duelist</h3>Become one with your weapon and go for the weak spots! With the offhand free, an additional + 25% of any damage ignores armor. Does not work with two-handed weapons." data-toggle="tooltip" data-html="true" data-placement="bottom" data-animation="false" src="/img/perk-t7-2.png" alt="Perk Image"/>
@@ -141,21 +154,23 @@
         </div>
       </div>
 
-      <div>
-        <p> Share </p>
+      <div class="row justify-content-center">
+        <p class="col-12"> Share </p>
         <form id=urlForm>
           <input id="urlInput" type="text" name="url" value="" autocomplete="off">
           <input id="urlSubmit" type="submit" value="Copy">
         </form>
       </div>
-    </div>
 
-    <div id="foot" class="foot">
-      <div class="footerItem">
-        <a href="http://battlebrothers.wikia.com/wiki/Battle_Brothers_Wikia">[Battle Brothers Wikia]</a>
-      </div>
-      <div class="footerItem">
-        <a href="mailto:everycrime@yahoo.com?Subject=BBCalc" target="_top">[Contact]</a>
+      <div id="foot" class="foot row justify-content-center">
+        <div class="col-12 justify-content-center">
+          <div class="footerItem">
+            <a href="http://battlebrothers.wikia.com/wiki/Battle_Brothers_Wikia">[Battle Brothers Wikia]</a>
+          </div>
+          <div class="footerItem">
+            <a href="mailto:everycrime@yahoo.com?Subject=BBCalc" target="_top">[Contact]</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -180,6 +195,8 @@
         for (var i=1; i<8; i++) {
           tierBook[i] = 0;
         }
+
+
 
         function copyToClipboard(element) {
           var $temp = $("<input>");
@@ -227,15 +244,16 @@
         })();
 
         $( function() {
-          $('[data-toggle="tooltip"]').tooltip();
-          $('[rel=tooltip]').tooltip('disable')
-          $('[rel=tooltip]').tooltip('enable')
-          $('[rel=tooltip]').tooltip('destroy')
+          if(!('ontouchstart' in window)) {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[rel=tooltip]').tooltip('disable')
+            $('[rel=tooltip]').tooltip('enable')
+            $('[rel=tooltip]').tooltip('destroy')
+          }
 
           $("img").each(function(index) {
             var myID = $(this).attr('id');
             var myTier = Number($(this).parent().attr('id'));
-
 
             if (urlParams[myID] === "") {
               $('#Level').text('Level Required: ' + Math.min(11, tier+1))
