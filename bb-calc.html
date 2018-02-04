@@ -168,7 +168,11 @@
     $(document).ready(function(){
         var abilityPoints = 10;
         var tier = 1;
-        var arrayOfSelectedTiers = [];
+
+        var tierBook = {}
+        for (var i=1; i<8; i++) {
+          tierBook[i] = 0;
+        }
 
         function copyToClipboard(element) {
           var $temp = $("<input>");
@@ -220,9 +224,12 @@
           $('[rel=tooltip]').tooltip('disable')
           $('[rel=tooltip]').tooltip('enable')
           $('[rel=tooltip]').tooltip('destroy')
+
           $("img").each(function(index) {
             var myID = $(this).attr('id');
             var myTier = Number($(this).parent().attr('id'));
+
+
             if (urlParams[myID] === "") {
               $('#Level').text('Level Required: ' + Math.min(11, tier+1))
 
@@ -231,7 +238,7 @@
                 abilityPoints --
               }
 
-              arrayOfSelectedTiers.push(myTier)
+              tierBook[myTier]++
               tier ++
             }
           })
@@ -250,7 +257,11 @@
         $("#reset").click(function() {
           abilityPoints = 10;
           tier = 1;
-          arrayOfSelectedTiers = [];
+
+          tierBook = {}
+          for (var i=1; i<8; i++) {
+            tierBook[i] = 0;
+          }
           $("img").attr('class', 'unselected')
           $('#Level').text('Level Required: 1')
           history.replaceState('', document.title, window.location.pathname)
@@ -278,28 +289,31 @@
                   abilityPoints --
                 }
 
-                arrayOfSelectedTiers.push(myTier)
+                tierBook[myTier]++
                 tier ++
                 $('#Level').text('Level Required: ' + Math.min(11, tier))
               }
             }
           } else {
-            // This perk is already selected, check if it can be deselected.
-            // If I am the only one on the row, and theres a perk above me, I cannot be removed.
-            var largestTier = Math.max.apply(null, arrayOfSelectedTiers);
-            var allow=true;
-            if (largestTier > myTier) {
-              //There is a perk above me.
-              var modifiedArr = arrayOfSelectedTiers.slice();
-              var index = modifiedArr.indexOf(myTier);
-              modifiedArr.splice(index,1)
-              if (modifiedArr.length > 0) {
-                if (!modifiedArr.includes(myTier)) {
-                  allow=false;
-                }
-                //I am the only one on my tier, but not the only perk on the board.
+            // If the number of perks in this tier and below do not equal the tier of the next highest perk
+            var supportingPerkCount  = 0;
+            var allow=false;
+            for (var i=1; i<=myTier; i++) {
+              supportingPerkCount+=tierBook[i]
+            }
 
+            var nextHighestTier = null;
+            for (var i=myTier+1; i<8; i++) {
+              if (tierBook[i]!=0) {
+                nextHighestTier = i;
+                break;
               }
+            }
+
+            if (nextHighestTier = null || supportingPerkCount>=nextHighestTier) {
+              allow=true
+            } else {
+              allow=false
             }
 
             if (allow) {
@@ -309,11 +323,10 @@
               }
 
               var moddedURL = removeURLParameter(window.location.href, myID);
-
               history.replaceState(window.location.href, document.title,moddedURL)
 
+              tierBook[myTier]--
               tier --
-              arrayOfSelectedTiers.splice(arrayOfSelectedTiers.indexOf(myTier), 1)
               $('#Level').text('Level Required: ' + Math.min(11, tier))
             }
           }
